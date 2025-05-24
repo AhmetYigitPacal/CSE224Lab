@@ -1,0 +1,86 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: _28_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _27_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _28_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     5    0.01    0.13    0.35    0.35 ^ _28_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                         net4 (net)
+                  0.13    0.00    0.35 ^ _14_/C_N (sky130_fd_sc_hd__or4bb_1)
+     2    0.00    0.09    0.50    0.85 v _14_/X (sky130_fd_sc_hd__or4bb_1)
+                                         _04_ (net)
+                  0.09    0.00    0.85 v _17_/B (sky130_fd_sc_hd__and4b_1)
+     1    0.00    0.04    0.19    1.04 v _17_/X (sky130_fd_sc_hd__and4b_1)
+                                         _07_ (net)
+                  0.04    0.00    1.04 v _18_/A (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00    0.02    0.08    1.12 v _18_/X (sky130_fd_sc_hd__clkbuf_1)
+                                         _01_ (net)
+                  0.02    0.00    1.12 v _27_/D (sky130_fd_sc_hd__dfxtp_1)
+                                  1.12   data arrival time
+
+                  0.00   10.00   10.00   clock core_clock (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                                 10.00 ^ _27_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                         -0.11    9.89   library setup time
+                                  9.89   data required time
+-----------------------------------------------------------------------------
+                                  9.89   data required time
+                                 -1.12   data arrival time
+-----------------------------------------------------------------------------
+                                  8.77   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 1 unannotated drivers.
+ clk
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There is 1 input port missing set_input_delay.
+  reset
+Warning: There are 4 unconstrained endpoints.
+  count[0]
+  count[1]
+  count[2]
+  count[3]

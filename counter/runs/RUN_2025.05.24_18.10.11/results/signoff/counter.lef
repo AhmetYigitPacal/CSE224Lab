@@ -1,0 +1,104 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO counter
+  CLASS BLOCK ;
+  FOREIGN counter ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 31.665 BY 42.385 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 13.020 10.640 14.620 30.160 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 9.720 10.640 11.320 30.160 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 29.960 4.000 30.560 ;
+    END
+  END clk
+  PIN count[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.340600 ;
+    PORT
+      LAYER met3 ;
+        RECT 27.665 34.040 31.665 34.640 ;
+    END
+  END count[0]
+  PIN count[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.340600 ;
+    PORT
+      LAYER met3 ;
+        RECT 27.665 24.520 31.665 25.120 ;
+    END
+  END count[1]
+  PIN count[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.340600 ;
+    PORT
+      LAYER met3 ;
+        RECT 27.665 15.000 31.665 15.600 ;
+    END
+  END count[2]
+  PIN count[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.340600 ;
+    PORT
+      LAYER met3 ;
+        RECT 27.665 5.480 31.665 6.080 ;
+    END
+  END count[3]
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 9.560 4.000 10.160 ;
+    END
+  END reset
+  OBS
+      LAYER nwell ;
+        RECT 5.330 10.795 25.950 30.110 ;
+      LAYER li1 ;
+        RECT 5.520 10.795 25.760 30.005 ;
+      LAYER met1 ;
+        RECT 5.520 10.640 25.760 30.160 ;
+      LAYER met2 ;
+        RECT 6.990 5.595 24.290 34.525 ;
+      LAYER met3 ;
+        RECT 4.000 33.640 27.265 34.505 ;
+        RECT 4.000 30.960 27.665 33.640 ;
+        RECT 4.400 29.560 27.665 30.960 ;
+        RECT 4.000 25.520 27.665 29.560 ;
+        RECT 4.000 24.120 27.265 25.520 ;
+        RECT 4.000 16.000 27.665 24.120 ;
+        RECT 4.000 14.600 27.265 16.000 ;
+        RECT 4.000 10.560 27.665 14.600 ;
+        RECT 4.400 9.160 27.665 10.560 ;
+        RECT 4.000 6.480 27.665 9.160 ;
+        RECT 4.000 5.615 27.265 6.480 ;
+  END
+END counter
+END LIBRARY
+

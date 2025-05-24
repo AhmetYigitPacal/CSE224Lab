@@ -1,0 +1,19 @@
+Design Name: counter
+Run Directory: /openlane/designs/counter/runs/RUN_2025.05.24_18.10.11
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/counter/runs/RUN_2025.05.24_18.10.11/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/counter/runs/RUN_2025.05.24_18.10.11/logs/signoff/37-counter.lef.lvs.log
+Number of nets: 29                         |Number of nets: 29                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/counter/runs/RUN_2025.05.24_18.10.11/logs/signoff/40-arc.log
+Pin violations: 0
+Net violations: 0
